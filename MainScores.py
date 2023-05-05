@@ -4,7 +4,7 @@ from os.path import exists
 import threading
 import webbrowser
 
-app = Flask(__name__)
+app = Flask('__main__')
 
 @app.route('/')
 def score_server():
@@ -18,6 +18,7 @@ def score_server():
     else:
         template = '<html><head><title>Scores Game</title></head><body><h1><div id="score" style="color:red">{{ error }}</div></h1></body></html>'
         return render_template_string(template, error=BAD_RETURN_CODE)
+        # the html was give as a template - not my code
 
 if __name__ == '__main__':
     url = 'http://127.0.0.1:5000'
