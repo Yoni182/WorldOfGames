@@ -1,5 +1,6 @@
 import random
 import time
+from Score import add_score
 
 
 def generate_sequence(difficulty):
@@ -21,9 +22,10 @@ def get_list_from_user(difficulty):
     return user_list
 
 
-def is_list_equal(random_list, user_list):
+def is_list_equal(random_list, user_list, difficulty):
     if random_list == user_list:
         print("The lists are the same, good job! you guessed it right!")
+        return add_score(difficulty)
     else:
         print("The lists are not the same, too bad, try again next time...")
 

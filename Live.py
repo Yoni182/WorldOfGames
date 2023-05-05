@@ -1,7 +1,7 @@
 import MemoryGame
 import GuessGame
 import CurrencyRouletteGame
-
+from Score import add_score
 
 def welcome():
     name = input('Enter Your Name:')
@@ -25,12 +25,15 @@ def load_game():
     if game == 1:
         print(f"Your game is {first_game}")
         MemoryGame.play(difficulty)
+        # add_score(int(difficulty))
     elif game == 2:
         print(f"Your game is {second_game}")
         GuessGame.play(difficulty)
+        # add_score(int(difficulty))
     elif game == 3:
         print(f"Your game is {third_game}")
         CurrencyRouletteGame.play(difficulty)
+        # add_score(int(difficulty))
     else:
         print("Error of choosing game, please input only numbers between 1-3, try again:")
         load_game()

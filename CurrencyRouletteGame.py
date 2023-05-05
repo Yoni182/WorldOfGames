@@ -1,6 +1,6 @@
 import random
 from currency_converter import CurrencyConverter
-
+from Score import add_score
 
 def get_money_interval(difficulty):
     d = difficulty
@@ -38,6 +38,7 @@ def play(difficulty):
 
     if int(interval_1) <= int(guess) <= int(interval_2):
         print("True, you guessed it correctly! your guess is close to the actual result! ")
+        add_score(difficulty)
     else:
         print("False, bad guess, try again next time...")
 
