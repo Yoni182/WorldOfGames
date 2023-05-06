@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout - my repo') {
             steps {
-                git branch: 'main', url:  'https://github.com/NikitaForGit/WorldOfGames'
+                git branch: 'master', url:  'https://github.com/NikitaForGit/WorldOfGames'
             }
         }
         stage('Build docker image') {
@@ -20,7 +20,7 @@ pipeline {
         stage('Test the score html with selenium') {
             steps {
                 bat 'pip3 install selenium'
-                bat 'python3 e2e.py'
+                bat 'e2e.py'
             }
         }
         stage('Down the docker image and push to repo ') {
