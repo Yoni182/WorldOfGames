@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout - my repo') {
             steps {
-                git checkout https://github.com/NikitaForGit/WorldOfGames
+                git branch: 'main', url:  'https://github.com/NikitaForGit/WorldOfGames'
             }
         }
         stage('Build docker image') {
@@ -26,8 +26,7 @@ pipeline {
         stage('Down the docker image and push to repo ') {
             steps {
                 bat 'docker-compose down'
-                bat 'docker push nikitafordocker/wog-scores:latest
-'
+                bat 'docker push nikitafordocker/wog-scores:latest'
             }
         }
     }
