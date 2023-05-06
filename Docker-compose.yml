@@ -1,0 +1,6 @@
+version: '1'
+services:
+  score-system:
+    image: nikitafordocker/wog-scores:latest
+    ports:
+      - "8777:5000"

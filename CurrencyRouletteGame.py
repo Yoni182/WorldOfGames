@@ -2,6 +2,7 @@ import random
 from currency_converter import CurrencyConverter
 from Score import add_score
 
+
 def get_money_interval(difficulty):
     d = difficulty
     c = CurrencyConverter()
@@ -41,5 +42,3 @@ def play(difficulty):
         add_score(difficulty)
     else:
         print("False, bad guess, try again next time...")
-
-

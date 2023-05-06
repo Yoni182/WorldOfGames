@@ -1,5 +1,5 @@
 from Utils import SCORES_FILE_NAME
-from os.path import exists
+
 
 def add_score(difficulty):
     scores = open(SCORES_FILE_NAME, 'a')

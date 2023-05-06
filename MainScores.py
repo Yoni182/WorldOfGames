@@ -6,6 +6,7 @@ import webbrowser
 
 app = Flask('__main__')
 
+
 @app.route('/')
 def score_server():
     score = False
@@ -13,12 +14,13 @@ def score_server():
         file = open(SCORES_FILE_NAME, 'r')
         score = file.read()
     if score:
-        template = '<html><head><title>Scores Game</title></head><body><h1>Your Score is: <div id="score">{{ SCORE }}</div></h1></body></html>'
+        template = '<html><head><title>Scores Game</title></head><body><h1>Your Score is: <div id="scoreid">{{ SCORE }}</div></h1></body></html>'
         return render_template_string(template, SCORE=score)
     else:
-        template = '<html><head><title>Scores Game</title></head><body><h1><div id="score" style="color:red">{{ error }}</div></h1></body></html>'
+        template = '<html><head><title>Scores Game</title></head><body><h1><div id="scoreid" style="color:red">{{ error }}</div></h1></body></html>'
         return render_template_string(template, error=BAD_RETURN_CODE)
         # the html was give as a template - not my code
+
 
 if __name__ == '__main__':
     url = 'http://127.0.0.1:5000'
