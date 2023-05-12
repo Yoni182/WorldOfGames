@@ -1,6 +1,6 @@
 version: '1'
 services:
   score-system:
-    image: nikitafordocker/wog-scores:latest
+    image: wog-scores:1.0
     ports:
       - "5000:5000"

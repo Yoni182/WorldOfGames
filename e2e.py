@@ -15,7 +15,6 @@ def test_scores_service():
 
 
 def main_function():
-    url = 'http://127.0.0.1:5000'
     if test_scores_service():
         return 0
     else:

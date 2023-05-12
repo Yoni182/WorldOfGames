@@ -23,6 +23,6 @@ def score_server():
 
 
 if __name__ == '__main__':
-    url = 'http://127.0.0.1:5000'
-    threading.Timer(1.25, lambda: webbrowser.open(url)).start()
+    # url = 'http://127.0.0.1:5000'
+    # threading.Timer(1.25, lambda: webbrowser.open(url)).start()
     app.run()
