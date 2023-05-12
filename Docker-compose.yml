@@ -1,7 +1,6 @@
 version: '1'
 services:
-  network_mode: host
   score-system:
     image: wog-scores:latest
-    ports:
+    expose:
       - "5000:5000"
