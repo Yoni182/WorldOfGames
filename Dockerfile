@@ -5,4 +5,4 @@ COPY MainScores.py .
 COPY Utils.py .
 COPY Scores.txt .
 EXPOSE 5000
-ENTRYPOINT ["python", "/app/MainScores.py"]
+ENTRYPOINT ["python", "MainScores.py"]
