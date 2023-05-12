@@ -1,19 +1,22 @@
 from selenium import webdriver
 import re
 
+from selenium.webdriver.common.by import By
 
-def test_scores_service(url):
+
+def test_scores_service():
     my_driver = webdriver.Chrome()
-    my_driver.get(url)
-    try:
-        assert re.search(r'Your Score is:', my_driver.page_source)
-    except AssertionError:
-        print('Error - No Score Found')
+    my_driver.get('http://127.0.0.1:5000')
+    score = my_driver.find_element(By.ID, 'scoreid').text
+    if 1 <= int(score) <= 10000:
+        return True
+    else:
+        return False
 
 
 def main_function():
     url = 'http://127.0.0.1:5000'
-    if test_scores_service(url):
+    if test_scores_service():
         return 0
     else:
         return -1
