@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 
 def test_scores_service():
     my_driver = webdriver.Chrome()
-    my_driver.get('http://127.0.0.1:5000')
+    my_driver.get('http://localhost:5000')
     score = my_driver.find_element(By.ID, 'scoreid').text
     if 1 <= int(score) <= 10000:
         return True
