@@ -1,0 +1,3 @@
+selenium~=4.9.0
+Flask~=2.2.3
+CurrencyConverter

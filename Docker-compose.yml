@@ -1,0 +1,6 @@
+version: '1'
+services:
+  score-system:
+    image: wog-scores:latest
+    ports:
+      - "5001:5000"
