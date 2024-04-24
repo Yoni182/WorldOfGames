@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout - my repo') {
             steps {
-                git branch: 'master', url:  'https://github.com/yoni182/WorldOfGames'
+                git branch: 'master', url:  'https://github.com/NikitaForGit/WorldOfGames'
             }
         }
         stage('Build docker image') {
