@@ -26,7 +26,7 @@ pipeline {
         stage('Down the docker image and push to repo ') {
             steps {
                 bat 'docker-compose down'
-                bat 'docker push nikitafordocker/wog-scores:latest'
+                bat 'docker push yonifordocker/wog-scores:latest'
             }
         }
     }
