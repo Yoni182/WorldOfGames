@@ -4,23 +4,23 @@ pipeline {
     stages {
         stage('Checkout - my repo') {
             steps {
-                git branch: 'main', url:  'https://github.com/NikitaForGit/WorldOfGames'
+                git branch: 'main', url:  'https://github.com/yoni182/WorldOfGames'
             }
         }
         stage('Build docker image') {
             steps {
-                bat 'docker build -t wog-scores:latest .'
+                sh 'docker build -t wog-scores:latest .'
             }
         }
         stage('Run docker image using compose (detached) ') {
             steps {
-                bat 'docker-compose up -d'
+                sh 'docker-compose up -d'
             }
         }
         stage('Test the score html with selenium') {
             steps {
-                bat 'pip3 install selenium'
-                bat 'e2e.py'
+                sh 'pip3 install selenium'
+                sh 'e2e.py'
             }
         }
         stage('Down the docker image and push to repo ') {
