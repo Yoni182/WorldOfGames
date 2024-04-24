@@ -25,8 +25,8 @@ pipeline {
         }
         stage('Down the docker image and push to repo ') {
             steps {
-                bat 'docker-compose down'
-                bat 'docker push yonifordocker/wog-scores:latest'
+                sh 'docker-compose down'
+                sh 'docker push yoni182/wog-scores:latest'
             }
         }
     }
