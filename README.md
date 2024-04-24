@@ -13,4 +13,3 @@ This folder contains three games:
 2. GuessGame.py: Play and try to guess a number between 1 and a selected difficulty number.
 
 3. CurrencyRoulette.py: Play and try to guess the value of a randomly displayed amount of Dollars to ILS.
->>>>>>> master
